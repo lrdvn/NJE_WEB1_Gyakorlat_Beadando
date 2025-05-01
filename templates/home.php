@@ -55,5 +55,18 @@ $loggedIn = !empty($_SESSION['user']);
     <a href="?page=dashboard" class="btn btn-light btn-lg">Áttekintés</a>
   </div>
   <?php endif; ?>
-
+<div style="width: 100%; margin-top: 25px;">
+  <h2 style="text-align:center;">Székhelyünk térképen</h2>
+  <iframe
+    width="100%"
+    height="450"
+    frameborder="0"
+    style="border:0"
+    allowfullscreen
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps?q=46.896252,19.668381&hl=hu&z=17&output=embed">
+  </iframe>
+</div>
+46.896252, 19.668381
 </div>
