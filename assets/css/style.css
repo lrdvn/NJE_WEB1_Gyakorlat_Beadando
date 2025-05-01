@@ -1,0 +1,76 @@
+/* Mindig foglalja a függőleges görgetősáv helyét */
+html {
+  overflow-y: scroll;        /* mindig foglal helyet a scrollbarnak */
+}
+nav {
+  box-sizing: border-box;     /* padding-et is beleszámít a szélességbe */
+}
+
+/* 1. Alapelrendezés: a teljes oldal flex-konténerként viselkedik */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 2. Fő tartalom rugalmassága */
+main {
+    flex: 1 0 auto;
+    margin-bottom: 0;
+}
+
+/* 3. Clearfix esetleges floatok után */
+main::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 4. Ugrásmentes, flex‑alapú felső menü */
+nav {
+    width: 100%;
+    background-color: #ffffff; /* vagy amilyen színű a menü háttere */
+}
+
+nav ul {
+    display: flex;            /* flex‑sor */
+    flex-wrap: wrap;          /* ha túl sok elem, törjön sorra */
+    list-style: none;         /* nincs listajel */
+    margin: 0;                /* semmi külső margó */
+    padding: 0;               /* semmi belső padding */
+    gap: 1rem;                /* egységes távolság menüpontok között */
+}
+
+nav ul li {
+    margin: 0;                /* semmi margin */
+}
+
+nav ul li a {
+    display: block;
+    padding: 0.75em 1em;
+    text-decoration: none;
+    color: #333;              /* menüpont színe */
+    border-bottom: 2px solid transparent; /* fix hely a szegélynek */
+    transition: border-color 0.2s ease, color 0.2s ease;
+    box-sizing: border-box;   /* border a paddinget ne növelje */
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #007bff;           /* hover/aktív szöveg színe */
+    border-bottom-color: #007bff; /* alul színes szegély hover‑kor */
+}
+
+/* 5. Lábléc mindig az oldal alján marad */
+footer {
+    border-top: 1px solid #dee2e6;
+    margin-top: auto;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 1rem 0;
+}
