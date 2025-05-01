@@ -33,7 +33,7 @@ $loggedIn = !empty($_SESSION['user']);
       <h3>YouTube bemutató</h3>
       <div class="ratio ratio-16x9 rounded border">
         <iframe
-          src="https://www.youtube.com/embed/08IvE3ap_94"
+          src="https://www.youtube.com/watch?v=SGyOaCXr8Lw&t=107s"
           title="YouTube videó"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
