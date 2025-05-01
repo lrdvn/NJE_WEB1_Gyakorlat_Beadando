@@ -22,24 +22,24 @@ $loggedIn = !empty($_SESSION['user']);
 
   <!-- Videók -->
   <div class="row mt-5 gy-4">
-    <div class="col-lg-6">
-      <h3>Belső bemutató</h3>
-      <video class="w-100 rounded border" controls>
-        <source src="uploads/videos/promo.mp4" type="video/mp4">
-        A böngésződ nem támogatja a videó tag-et.
-      </video>
-    </div>
-    <div class="col-lg-6">
+   <div class="col-lg-6">
       <h3>YouTube bemutató</h3>
       <div class="ratio ratio-16x9 rounded border">
         <iframe
-          src="https://www.youtube.com/watch?v=SGyOaCXr8Lw&t=107s"
+          src="https://youtube.com/embed/SGyOaCXr8Lw"
           title="YouTube videó"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
         </iframe>
       </div>
+    </div>
+    <div class="col-lg-6">
+      <h3>Belső bemutató</h3>
+      <video class="w-100 rounded border" controls>
+        <source src="uploads/videos/promo.mp4" type="video/mp4">
+        A böngésződ nem támogatja a videó tag-et.
+      </video>
     </div>
   </div>
 
